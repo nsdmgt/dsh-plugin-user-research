@@ -1,0 +1,41 @@
+{
+  "name": "dsh-plugin-user-research",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 插件：用户研究合成 Agent 包——把访谈 / 问卷 / 观察笔记合成用户画像、痛点与机会点。",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "synthesize.js",
+    "cordis.patch.yml",
+    "skills",
+    "templates",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": "^22.19 || >=24",
+    "dsh": ">=0.1.0-rc.7"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "user-research",
+    "ux-research",
+    "pm",
+    "product-management"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  }
+}
