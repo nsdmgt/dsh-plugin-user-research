@@ -1,0 +1,11 @@
+# DeepSeek Harness plugin mount descriptor.
+# Inserts this bundle's plugin row into the composed Cordis tree.
+# When installed via `dsh plugin --profile web add dsh-plugin-user-research`,
+# the `name` resolves to the published npm package.
+# For LOCAL development, replace `name` with an absolute path to index.js, e.g.:
+#   - insert:
+#       - id: dsh-plugin-user-research
+#         name: /absolute/path/to/dsh-plugin-user-research/index.js
+- insert:
+    - id: dsh-plugin-user-research
+      name: dsh-plugin-user-research
