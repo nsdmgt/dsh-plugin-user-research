@@ -42,7 +42,8 @@ export function apply(ctx) {
         },
       },
       output: {
-        schema: { type: 'object' },
+        // 新版 dsh-tools 要求对象 schema 显式声明 additionalProperties
+        schema: { type: 'object', additionalProperties: true },
         render: (_args, value) => [
           { type: 'text', text: typeof value === 'string' ? value : JSON.stringify(value, null, 2) },
         ],
